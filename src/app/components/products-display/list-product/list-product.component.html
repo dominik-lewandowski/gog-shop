@@ -1,0 +1,29 @@
+<div class="list-product-container">
+  <div class="list-product-thumbnail">
+    <img [src]="product.thumbnail" [alt]="product.title + ' thumbnail'">
+  </div>
+
+  <div class="list-product-info">
+    <h5>{{product.title | uppercase}}</h5>
+
+    <div class="list-product-info_status">
+      <div class="status_discount" *ngIf="hasDiscount()">
+        -{{ product.discount }}%
+      </div>
+
+      <div [ngSwitch]="checkStatus()" (click)="changeStatus()">
+        <div class="status_button owned" *ngSwitchCase="'owned'">
+          OWNED
+        </div>
+
+        <div class="status_button" *ngSwitchCase="'cart'">
+          IN CART
+        </div>
+
+        <div class="status_button" *ngSwitchCase="'available'">
+          {{product.price | currency}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

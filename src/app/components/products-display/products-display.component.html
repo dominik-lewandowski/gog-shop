@@ -1,0 +1,16 @@
+<div class="products-display-container">
+  <div class="products-display-gotw">
+    <h5>GAME OF THE WEEK</h5>
+
+    <img src="assets/images/product_0.png" alt="game of the week">
+  </div>
+
+  <div class="products-display-list">
+    <gog-list-product
+      *ngFor="let product of products$ | async"
+      (statusChange)="changeProductStatus(product)"
+      [inCart]="isInCart(product)"
+      [product]="product">
+    </gog-list-product>
+  </div>
+</div>

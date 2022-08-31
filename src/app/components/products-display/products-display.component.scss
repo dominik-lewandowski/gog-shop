@@ -1,0 +1,30 @@
+@use 'src/styles/palette';
+
+
+.products-display-container {
+  width: 66.75rem;
+  margin: 2.5rem auto auto;
+}
+
+h5 {
+  margin-left: .375rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.products-display-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: .5rem 6px 0;
+}
+
+gog-list-product {
+  flex: 1 1 0;
+}

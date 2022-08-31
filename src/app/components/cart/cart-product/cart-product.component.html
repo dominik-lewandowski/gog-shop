@@ -1,0 +1,19 @@
+<div class="cart-product-container" (mouseenter)="showRemove()" (mouseleave)="hideRemove()">
+  <div class="cart-product-thumbnail">
+    <img [src]="product.thumbnail" [alt]="product.title + ' thumbnail'">
+  </div>
+
+  <div class="cart-product-info">
+    <h5>{{product.title | uppercase | trim: 29}}</h5>
+    <button
+      class="cart-product-info_remove-product"
+      (click)="doRemove()"
+      *ngIf="shouldShowRemove">
+      Remove
+    </button>
+  </div>
+
+  <div class="cart-product-price">
+    <div>{{product.price | currency}}</div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@use 'src/styles/palette';
+
+
+nav {
+  height: 5rem;
+  background: linear-gradient(360deg,
+      rgba(220, 220, 220, 0.0001) 0%,
+      palette.$white_mid_opacity 93.45%,
+      palette.$white_mid_opacity 100%),
+    linear-gradient(0deg, palette.$gray_light, palette.$gray_light);
+  box-shadow: 0 1px 3px 0 palette.$black_low_opacity, 0 0 15px 0 palette.$black_low_opacity;
+}
+
+.nav-container {
+  width: 66.75rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 3rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
